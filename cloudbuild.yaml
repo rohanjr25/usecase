@@ -1,25 +1,25 @@
 steps:
   # Step 1: Build and push the Frontend Docker image
-  - name: 'gcr.io1/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/my-project2510/usecaserepo/frontend:$COMMIT_SHA', '.']
-  - name: 'gcr.io1/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/my-project2510/usecaserepo/frontend:$COMMIT_SHA']
  
   # Step 2: Build and push the Backend Docker image
-  - name: 'gcr.io2/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/my-project2510/usecaserepo/backend:$COMMIT_SHA', '.']
-  - name: 'gcr.io2/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/my-project2510/usecaserepo/backend:$COMMIT_SHA']
  
   # Step 3: Build and push the Database Docker image
-  - name: 'gcr.io3/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/my-project2510/usecaserepo/database:$COMMIT_SHA', '.']
-  - name: 'gcr.io3/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/my-project2510/usecaserepo/database:$COMMIT_SHA']
  
 images:
-  - 'gcr.io1/my-project2510/usecaserepo/frontend:$COMMIT_SHA'
-  - 'gcr.io2/my-project2510/usecaserepo/backend:$COMMIT_SHA'
-  - 'gcr.io3/my-project2510/usecaserepo/database:$COMMIT_SHA'
+  - 'gcr.io/my-project2510/usecaserepo/frontend:$COMMIT_SHA'
+  - 'gcr.io/my-project2510/usecaserepo/backend:$COMMIT_SHA'
+  - 'gcr.io/my-project2510/usecaserepo/database:$COMMIT_SHA'
 options:
   logging: 'CLOUD_LOGGING_ONLY'
