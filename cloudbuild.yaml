@@ -2,11 +2,11 @@ steps:
 
 - name: 'gcr.io/cloud-builders/docker'
 
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/my-project2510/my-repo/my-app:$COMMIT_SHA', '.']
+  args: ['build', '-t', 'us-docker.pkg.dev/my-project2510/rohanrepo-tomcat/newimage:latest:$COMMIT_SHA', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
 
-  args: ['push', 'us-central1-docker.pkg.dev/my-project2510/my-repo/my-app:$COMMIT_SHA']
+  args: ['push', 'us-docker.pkg.dev/my-project2510/rohanrepo-tomcat/newimage:latest:$COMMIT_SHA']
  
 images:
 
