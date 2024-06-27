@@ -1,24 +1,24 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/frontend:frotend', '.']
+    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/frontend:nginx'', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/frontend:frontend']
+    args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/frontend:nginx'']
  
   # Step 2: Build and push the Backend Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/backend:backend', '.']
+    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/backend:nginx'', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/backend:backend']
+    args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/backend:nginx'']
  
   # Step 3: Build and push the Database Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/database:database', '.']
+    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/database:nginx'', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/database:database']
+    args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/database:nginx'']
  
 images:
-  - 'gcr.io/my-project2510/rohanusecaserepo/frontend:frontend'
-  - 'gcr.io/my-project2510/rohanusecaserepo/backend:backend'
-  - 'gcr.io/my-project2510/rohanusecaserepo/database:database'
+  - 'gcr.io/my-project2510/rohanusecaserepo/frontend:nginx''
+  - 'gcr.io/my-project2510/rohanusecaserepo/backend:nginx''
+  - 'gcr.io/my-project2510/rohanusecaserepo/database:nginx''
 options:
   logging: 'CLOUD_LOGGING_ONLY'
