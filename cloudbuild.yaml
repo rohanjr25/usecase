@@ -1,18 +1,18 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/frontend:$COMMIT_SHA', './frontend']
+    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/frontend:$COMMIT_SHA', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/frontend:$COMMIT_SHA']
  
   # Step 2: Build and push the Backend Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/backend:$COMMIT_SHA', './backend']
+    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/backend:$COMMIT_SHA', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/backend:$COMMIT_SHA']
  
   # Step 3: Build and push the Database Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/database:$COMMIT_SHA', './database']
+    args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/database:$COMMIT_SHA', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/database:$COMMIT_SHA']
  
