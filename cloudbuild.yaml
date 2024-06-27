@@ -7,3 +7,4 @@ steps:
 images:
 - 'us-central1-docker.pkg.dev/my-project2510/my-repo/my-app:$COMMIT_SHA'
 ~                                                                          
+options:logging: 'CLOUD_LOGGING_ONLY'
