@@ -2,7 +2,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/my-project2510/rohanusecaserepo/frontend:nginx', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/frontend:nginx'']
+    args: ['push', 'gcr.io/my-project2510/rohanusecaserepo/frontend:nginx']
  
   # Step 2: Build and push the Backend Docker image
   - name: 'gcr.io/cloud-builders/docker'
